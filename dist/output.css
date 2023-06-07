@@ -1787,4 +1787,12 @@ html{
   background: var(--swiper-pagination-color,yellow) !important;
 }
 
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+  content: 'next';
+  font-size: 2rem;
+}
 
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+  content: 'prev';
+  font-size: 2rem;
+}
