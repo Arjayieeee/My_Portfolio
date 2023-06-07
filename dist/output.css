@@ -1782,3 +1782,9 @@ html{
 }
 
 
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: var(--swiper-pagination-color,yellow) !important;
+}
+
+

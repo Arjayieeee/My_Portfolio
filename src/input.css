@@ -292,5 +292,9 @@ z-index:999;
 .swiper-button-prev:hover, .swiper-button-next:hover{
     @apply opacity-[65%]
 }
+.swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: var(--swiper-pagination-color,yellow);
+}
 
 
