@@ -280,7 +280,7 @@ z-index:999;
 }
 
 .swiper-slide-active img{
-    @apply border-[3px] border-yellow
+    @apply border-[3px] border-yellow-400
    
 }
 .swiper-button-next:after{
