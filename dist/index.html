@@ -7,6 +7,13 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="./output.css">
     <script src="https://kit.fontawesome.com/25db722303.js" crossorigin="anonymous"></script>
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('WjSfh_5YGfGIRP1wT');
+        })();
+        </script>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"> -->
     <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 </head>
@@ -280,7 +287,7 @@
                                 </ul>
                             </div>
                             <div class="contact__input my-[1.5rem]">
-                                <form action="" class="lg:flex lg:justify-between lg:gap-[2rem]">
+                                <form action="" class="lg:flex lg:justify-between lg:gap-[2rem]"  id="contact-form">
                                     <div class="inputgroup text-center">
                                     <input type="text"  placeholder="Name" id="" class="w-[27rem] py-[1rem] rounded-[.5rem] ">
                                     <br>
@@ -313,6 +320,22 @@
         </div>
     </footer>
 
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
