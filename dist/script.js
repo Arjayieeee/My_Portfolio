@@ -85,3 +85,52 @@ const swiper = new Swiper('.swiper', {
      
   });
 
+
+  // text animation
+
+ScrollReveal({
+    reset: true,
+    distance: "20rem",
+    duration: 1000,
+    delay: 200,
+  });
+  
+  ScrollReveal().reveal(
+    ".banner__content, .about__title, .skills__tittle, .services__tittle, .works__tittle, .contact__tittle ", 
+    { delay: 300, origin: "top" }
+  );
+  ScrollReveal().reveal(
+    ".skills__tittle, .services .services__content",
+    { delay: 500, origin: "top" }
+  );
+  ScrollReveal().reveal(
+    " .swiper ",
+    { delay: 200, origin: "left" }
+  );
+  ScrollReveal().reveal(
+    ".context p, .socmed, .contact_form ",
+    { delay: 300, origin: "right" }
+  );
+  ScrollReveal().reveal(
+    "#card1",
+    { delay: 500, origin: "top" }
+  );
+  ScrollReveal().reveal(
+    "#card2",
+    { delay: 550, origin: "top" }
+  );
+  ScrollReveal().reveal(
+    "#card3",
+    { delay: 600, origin: "top" }
+  );
+  ScrollReveal().reveal(
+    "#card4",
+    { delay: 650, origin: "top" }
+  );
+  ScrollReveal().reveal(
+    "#card5",
+    { delay: 700, origin: "top" }
+  );
+
+
+
